@@ -2,9 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #06b6d3; */
-  /* background-color: #12373d; */
-  
 }
 
 body {
@@ -15,7 +12,6 @@ body {
 
 section {
   height: 100vh;
-  /* background-color: #06b6d3; */
   font-family: "Press Start 2P", cursive;
 }
 
@@ -86,7 +82,6 @@ header {
   border: none;
   color: #282828;
   font-size: 1em;
-  /* background: #006d95; */
   background: #c8e2e6;
   border-radius: 3px;
   cursor: pointer;
@@ -99,6 +94,8 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.5s ease 0.5s;
+  float: none;
+  height: 50%;
 }
 
 .winner {
@@ -134,39 +131,21 @@ div.fadeIn {
 .player-image {
   position: absolute;
   top: 30%;
-  left: 9%;
-  width: 10em;
-  height: 18em;
+  left: 10%;
   border: 1px solid #0f6e7c;
   border-radius: 15px;
+  width: 10%;
+  height: 21em;
 }
 
 .computer-image {
   position: absolute;
   top: 30%;
   left: 79%;
-  width: 10em;
-  height: 18em;
   border: 1px solid #0f6e7c;
   border-radius: 15px;
-}
-
-.player-underimage {
-  height: 8em;
-  width: 11em;
-  border-radius: 5px;
-  position: absolute; 
-  top: 70%;
-  left: 9%;
-}
-
-.computer-underimage {
-  height: 8em;
-  width: 11em;
-  border-radius: 5px;
-  position: absolute;
-  top: 70%;
-  left: 78.5%;
+  width: 10%;
+  height: 21em;
 }
 
 .about-title {
@@ -177,11 +156,9 @@ div.fadeIn {
 
 article {
   height: 88vh;
-  /* background-color: #06b6d3; */
   text-align: center;
   display: grid;
   grid-template-rows: 150px 0.6fr 2fr 0.8fr;
-
   font-family: "Press Start 2P", cursive;
 }
 
@@ -194,7 +171,6 @@ article img {
 table {
   margin: auto;
   height: 10em;
-  
 }
 
 @keyframes shakePlayer {
@@ -273,9 +249,10 @@ table {
   }
 }
 
-/* @media all and (max-width: 1100px), (max-height: 620px) {
+@media (max-width: 1100px),
+(max-height: 620px) {
   section {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
 
   .intro button,
@@ -291,16 +268,10 @@ table {
   .computer-hand {
     width: 40%;
   }
-  .match {
-    margin-top: -20px;
-  }
-  .computer-underimage,
-  .player-underimage {
-    margin-top: -5%;
-  }
-} */
+}
 
-@media all and (max-width: 1040px), (max-height: 580px) {
+@media (max-width: 750px),
+(max-height: 550px) {
   section {
     font-size: 0.5em;
   }
@@ -318,59 +289,17 @@ table {
   .computer-hand {
     width: 40%;
   }
-}
 
-/* @media all and (max-width: 750px), (max-height: 550px) {
-  section {
-    font-size: 0.5em;
-  }
-
-  .intro button,
-  .match button {
-    width: 8em;
-  }
-
-  .intro {
-    height: 25%;
-  }
-
-  .player-hand,
-  .computer-hand {
-    width: 40%;
-  }
-  .match {
-    margin-top: -80px;
-  }
-} */
-
-/* @media all and (max-height: 550px) {
-  .match {
-    margin-top: 30px;
-  }
-
-}
-
-@media all and (max-height: 660px) {
-  .match {
-    margin-top: 30px;
-  }
-  .computer-underimage,
-  .player-underimage {
-    margin-top: -2%;
+  .computer-image,
+  .player-image {
+    height: 30em;
   }
 }
 
-@media all and (max-height: 570px) {
-  .computer-underimage,
-  .player-underimage {
-    margin-top: 2%;
-  }
-}
+@media (max-width: 480px) {
 
-@media all and (max-height: 750px) {
-  .computer-underimage,
-  .player-underimage {
-    margin-top: 2%;
+  .computer-image,
+  .player-image {
+    height: 17em;
   }
 }
- */

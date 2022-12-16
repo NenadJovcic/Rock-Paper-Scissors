@@ -66,7 +66,7 @@ const startGame = () => {
     const winner = document.querySelector(".winner");
 
     if (playerChoice === computerChoice) {
-      winner.textContent = "It is a tie";
+      winner.textContent = "It's a tie";
       return;
     }
 

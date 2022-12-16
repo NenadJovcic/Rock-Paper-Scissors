@@ -63,6 +63,8 @@ const startGame = () => {
   };
 
   const compareHands = (playerChoice, computerChoice) => {
+    let playerImage = document.querySelector(".player-image");
+    let computerImage = document.querySelector(".computer-image");
     const winner = document.querySelector(".winner");
 
     if (playerChoice === computerChoice) {
@@ -73,15 +75,18 @@ const startGame = () => {
     if (playerChoice === "rock") {
       if (computerChoice === "scissors") {
         winner.textContent = "Player Wins!";
+        playerImage.style.animation = "shakePlayer 0.5s ease";
         playerStartScore++;
 
         updateScore();
+        restartAnimation(playerImage);
         return;
       } else {
         winner.textContent = "Computer Wins!!";
+        computerImage.style.animation = "shakePlayer 0.5s ease";
         computerStartScore++;
-
         updateScore();
+        restartAnimation(computerImage);
         return;
       }
     }
@@ -89,15 +94,17 @@ const startGame = () => {
     if (playerChoice === "paper") {
       if (computerChoice === "scissors") {
         winner.textContent = "Computer Wins!!";
+        computerImage.style.animation = "shakePlayer 0.5s ease";
         computerStartScore++;
-
         updateScore();
+        restartAnimation(computerImage);
         return;
       } else {
         winner.textContent = "Player Wins!";
+        playerImage.style.animation = "shakePlayer 0.5s ease";
         playerStartScore++;
-
         updateScore();
+        restartAnimation(playerImage);
         return;
       }
     }
@@ -105,17 +112,27 @@ const startGame = () => {
     if (playerChoice === "scissors") {
       if (computerChoice === "rock") {
         winner.textContent = "Computer Wins!!";
+        computerImage.style.animation = "shakePlayer 0.5s ease";
         computerStartScore++;
         updateScore();
+        restartAnimation(computerImage);
         return;
       } else {
         winner.textContent = "Player Wins";
+        playerImage.style.animation = "shakePlayer 0.5s ease";
         playerStartScore++;
         updateScore();
+        restartAnimation(playerImage);
         return;
       }
     }
   };
+
+  function restartAnimation(entityImage) {
+    setTimeout(() => {
+      entityImage.style.animation = "";
+    }, 1000);
+  }
 
   startScreen();
   playMatch();
